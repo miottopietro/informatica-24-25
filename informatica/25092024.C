@@ -16,4 +16,4 @@ int main(){
 	doppio = n*2;
 	printf("il doppio del numero inserito è: %d ", doppio);
 	
-}
+}   
