@@ -7,15 +7,11 @@ int main(){
     float num2=0;
     float num3=0;
     float media=0;
+    float max=0;
+    float min=0;
 
     printf("inserire il primo valore: ");
-    scanf("%f", num1);
-
-    printf("inserire il secondo valore: ");
-    scanf("%f", num2);
-
-    printf("inserire il terzo valore: ");
-    scanf("%f", num3);
+    scanf("%f%f%f", &num1, &num2, &num3);
 
     media = (num1+num2+num3)/3;
     printf("la media aritmetica è: %f", media);

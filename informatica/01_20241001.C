@@ -11,14 +11,14 @@ int main(){
 
     if(valore % 3 == 0){
         if(valore % 5 ==0){
-            printf("il valore è divisibile sia per 3 e per 5");
+            printf("il valore è divisibile sia per 3 e per 5", valore);
         }
         else{
-            printf("il valore non è divisibile sia per 3 e per 5");
+            printf("il valore non è divisibile sia per 3 e per 5", valore);
         }
     }
     else{
-        printf("il valore non è divisibile sia per 3 e per 5");
+        printf("il valore non è divisibile sia per 3 e per 5", valore);
     }
     return 0;
 }
