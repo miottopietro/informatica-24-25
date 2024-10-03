@@ -16,10 +16,10 @@
     scanf("%f", &altezza);
 
     perimetro = (base*2)+(altezza*2);
-    printf("il perimentro della figura è: %.2f CM " , perimetro);
+    printf("il perimentro della figura è: %.2f CM\n" , perimetro);
 
     area = base*altezza;
-    printf("l'area della figura geometrica è: %.2f CM2 ", area);
+    printf("l'area della figura geometrica è: %.2f CM2\n", area);
 
     if(base==altezza){
         printf("la forma geometrica è un quadrato.");
