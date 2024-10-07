@@ -10,28 +10,35 @@ int main(){
     float max=0;
     float min=0;
 
-    printf("inserire il primo valore: ");
-    scanf("%f%f%f", &num1, &num2, &num3);
+    printf("inserire i tre valori: ");
+    scanf("%f%f%f", &num1, &num2, &num3); //quando iserisci i valori inseriti con uno spazio
 
-    media = (num1+num2+num3)/3;
-    printf("la media aritmetica è: %f", media);
+    max=num1;
+    min=num1;
 
-    if(num1<num2){
-        printf("il numero minore è %f", num1);
+    if(max<num2){
+        max=num2;
+        if(max<num3)
+            max=num3;
+    
+    printf("il massimo è: %.2f", max);
+
+    if(min>num2){
+        min=num2;
+        if(min>num3){
+            min=num3;
+        }
     }
     else{
-        if(num2<num1){
-            printf("il numero minore è %f", num2);
+        if(min>num3){
+            min=num3;
         }
-        else{
-            if(num1<num3){
-                printf("il numero minore è %f", num1);
-            }
-            else{
-                if(num3<num1){
-                    printf("il numero minore è %f", num3);
-                }
-            }
-        }
+    printf("\nil valore minimo è: %.2f", min);
+
     }
+    }
+
+    media=(num1+num2+num3)/3;
+    printf("\nla media dei tre valori è: %.2f", media);
+
 }
