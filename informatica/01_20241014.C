@@ -96,11 +96,11 @@ int main(){
         printf("la seconda data non è accettabile.");
     }
 
-    if(aaD1 > aaD2){
+    if(aaD3 > aaD2){
         printf("la prima data è più recente.");
     }
     else{
-        if(aaD1 < aaD2){
+        if(aaD3 < aaD2){
             printf("la seconda data è più recente.");
         }
         else{
