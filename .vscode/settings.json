@@ -35,7 +35,9 @@
         "20241103_morra_cinese.C": "cpp",
         "20241103_sconti_reparto.C": "cpp",
         "20241004_dati_lati_individuare_forma_e_misure.C": "cpp",
-        "20241015_3_numeri_lati_triangolo.C": "cpp"
+        "20241015_3_numeri_lati_triangolo.C": "cpp",
+        "25092024.C": "cpp",
+        "20240925_doppio_di_un_numero.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
