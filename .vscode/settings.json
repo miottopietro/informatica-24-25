@@ -28,7 +28,10 @@
         "dollaro.C": "cpp",
         "01_20241102_euro_in_dollari.C": "cpp",
         "20241102_euro_in_dollari.C": "cpp",
-        "20240930_A_quadrato_B.C": "cpp"
+        "20240930_A_quadrato_B.C": "cpp",
+        "20241001_N_divisibile.C": "cpp",
+        "5.C": "cpp",
+        "20241001_N_divisibile_3e5.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
