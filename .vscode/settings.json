@@ -54,7 +54,8 @@
         "20240926_resto_benzinaio.C": "cpp",
         "20241028_scelta_operazioni.C": "cpp",
         "20241021_decimale_in_binario.C": "cpp",
-        "20241015_progressione_aritmetica.C": "cpp"
+        "20241015_progressione_aritmetica.C": "cpp",
+        "20241014_data_più_recente.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
