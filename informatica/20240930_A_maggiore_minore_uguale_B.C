@@ -1,4 +1,5 @@
-//stabilire se dati due numeri A e B controllare se A è minore, uguale o maggiore di B
+/*stabilire se dati due numeri A e B controllare se A è minore,
+uguale o maggiore di B*/
 
 #include <stdio.h>
 int main(){

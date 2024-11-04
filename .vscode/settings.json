@@ -49,7 +49,8 @@
         "20241004_triangolo_equilatero_misure.C": "cpp",
         "20241008_data_accettabile.C": "cpp",
         "20240926_costo_teatro.C": "cpp",
-        "20240926_costo_cinema.C": "cpp"
+        "20240926_costo_cinema.C": "cpp",
+        "20240930_A_maggiore_minore_uguale_B.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
