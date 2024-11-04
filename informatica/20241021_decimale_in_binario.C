@@ -1,4 +1,4 @@
-/*convertire un numero da decimale a binariointroducendo
+/*convertire un numero da decimale a binario introducendo
 un valore da 0 a 63*/
 
 #include <stdio.h>
