@@ -46,7 +46,8 @@
         "20241007_stampa_cifre.C": "cpp",
         "26092024_costo_cinema.C": "cpp",
         "20241007_N_dispari.C": "cpp",
-        "20241004_triangolo_equilatero_misure.C": "cpp"
+        "20241004_triangolo_equilatero_misure.C": "cpp",
+        "20241008_data_accettabile.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
