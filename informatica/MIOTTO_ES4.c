@@ -8,7 +8,7 @@ int main(){
     int r=0;
     int contatore=0;
 
-    printf("inserisci un vcalore: ");
+    printf("inserisci un valore: ");
     scanf("%d", &val);
 
     
