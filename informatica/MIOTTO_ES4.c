@@ -4,6 +4,13 @@ L’ESPONENTE.*/
 #include <math.h>
 int main(){
 
+    int val=0;
+    int r=0;
+    int contatore=0;
+
+    printf("inserisci un vcalore: ");
+    scanf("%d", &val);
+
     
 
     return 0;

@@ -78,7 +78,7 @@ int main(){
         else{
             printf("nessuno dei due valori è multiplo del altro.\n");
         }
-        
+    }
     default:{
         printf("hai inserito una scelta non valida.");
         break;}
