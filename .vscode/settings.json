@@ -56,7 +56,8 @@
         "20241021_decimale_in_binario.C": "cpp",
         "20241015_progressione_aritmetica.C": "cpp",
         "20241014_data_più_recente.C": "cpp",
-        "prova.C": "cpp"
+        "prova.C": "cpp",
+        "20241112_sequenza_Fibonacci_while.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
