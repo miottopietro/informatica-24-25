@@ -57,7 +57,9 @@
         "20241015_progressione_aritmetica.C": "cpp",
         "20241014_data_più_recente.C": "cpp",
         "prova.C": "cpp",
-        "20241112_sequenza_Fibonacci_while.C": "cpp"
+        "20241112_sequenza_Fibonacci_while.C": "cpp",
+        "20241114_stampa_10_valori.C": "cpp",
+        "20241114_stampa_5_valori.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
