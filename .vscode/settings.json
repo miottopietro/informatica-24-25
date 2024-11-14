@@ -59,7 +59,8 @@
         "prova.C": "cpp",
         "20241112_sequenza_Fibonacci_while.C": "cpp",
         "20241114_stampa_10_valori.C": "cpp",
-        "20241114_stampa_5_valori.C": "cpp"
+        "20241114_stampa_5_valori.C": "cpp",
+        "20241114_sequenza_di_numeri.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
