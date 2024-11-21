@@ -5,7 +5,6 @@ pari inferiori a tale numero fino a 0.*/
     int main(){
 
     int NUM=0;
-    int i=NUM - 1;
 
     do {
         printf("Inserisci un numero strettamente positivo: ");
@@ -17,6 +16,7 @@ pari inferiori a tale numero fino a 0.*/
 
     printf("Numeri pari inferiori a %d fino a 0:\n", NUM);
 
+    int i=NUM - 1;
     while (i >= 0) {
         if (i % 2 == 0) {
             printf("%d ", i);
