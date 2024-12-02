@@ -65,7 +65,8 @@
         "20241114_sequenza_di_numeri_NO_0.C": "cpp",
         "20241116_numeri_pari_inferiori_NUM.C": "cpp",
         "20241116_sequenza_numeri_val:min.C": "cpp",
-        "20241121_stampa_divisori.C": "cpp"
+        "20241121_stampa_divisori.C": "cpp",
+        "20241130_prodotto_tra_2_numeri.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
