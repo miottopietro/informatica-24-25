@@ -68,7 +68,8 @@
         "20241121_stampa_divisori.C": "cpp",
         "20241130_prodotto_tra_2_numeri.C": "cpp",
         "20241205_quziente_sottrazioni_successive.C": "cpp",
-        "20241209_A_divisibile_B.C": "cpp"
+        "20241209_A_divisibile_B.C": "cpp",
+        "20241212_somma_negativi_positivi.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
