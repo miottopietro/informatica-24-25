@@ -73,7 +73,8 @@
         "20241212_10_numeri_val_magg_conta.C": "cpp",
         "20241212_figura_asterisco.C": "cpp",
         "es_prova_verifica.C": "cpp",
-        "20241216_somma_primi_N.C": "cpp"
+        "20241216_somma_primi_N.C": "cpp",
+        "20241216_primi_N_dispari_di_A.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
