@@ -76,7 +76,9 @@
         "20241216_somma_primi_N.C": "cpp",
         "20241216_primi_N_dispari_di_A.C": "cpp",
         "20241219_quadrato_somma_N_dispari.C": "cpp",
-        "20250109_es_N_perfetto.C": "cpp"
+        "20250109_es_N_perfetto.C": "cpp",
+        "20250109_es11_pag247.C": "cpp",
+        "20250109_numeri_min_mag_uguale_a_X.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
