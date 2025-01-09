@@ -75,7 +75,8 @@
         "es_prova_verifica.C": "cpp",
         "20241216_somma_primi_N.C": "cpp",
         "20241216_primi_N_dispari_di_A.C": "cpp",
-        "20241219_quadrato_somma_N_dispari.C": "cpp"
+        "20241219_quadrato_somma_N_dispari.C": "cpp",
+        "20250109_es_N_perfetto.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
