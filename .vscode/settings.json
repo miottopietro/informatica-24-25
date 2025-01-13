@@ -78,7 +78,9 @@
         "20241219_quadrato_somma_N_dispari.C": "cpp",
         "20250109_es_N_perfetto.C": "cpp",
         "20250109_es11_pag247.C": "cpp",
-        "20250109_numeri_min_mag_uguale_a_X.C": "cpp"
+        "20250109_numeri_min_mag_uguale_a_X.C": "cpp",
+        "20250111_compito_vacanze_ES1.C": "cpp",
+        "20250113_somma_quadrati_fino_a_12.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
