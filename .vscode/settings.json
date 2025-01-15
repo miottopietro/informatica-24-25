@@ -81,7 +81,8 @@
         "20250109_numeri_min_mag_uguale_a_X.C": "cpp",
         "20250111_compito_vacanze_ES1.C": "cpp",
         "20250113_somma_quadrati_fino_a_12.C": "cpp",
-        "20250113_calcolo_fattoriale.C": "cpp"
+        "20250113_calcolo_fattoriale.C": "cpp",
+        "20250113_calcolo_media_pagella.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

@@ -3,8 +3,7 @@
        <body>
         <h1>ESERCIZIO FORMS</h1>
         <form>
-            First name: <br>
-            <input type="text"id="fname"name="fname"value="John"><br>
+            First name: <br><input type="text"id="fname"name="fname"value="John"><br>           
             Last name: <br><input type="text" id="lname" name="lname" value="Doe"><br><br>
             
             <input type="submit" value="Invia"><br>
@@ -25,7 +24,7 @@
             <input type="text" id="fname" name="fname" placeholder="John"><br>
             
             <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" placeholder ="Doe"><br><br>
+            <input type="text" id="lname" name="lname" placeholder ="Doe"><br><br>     <!-- form con  scritta già inserita in grigio--> 
             
             <input type="submit" value="Submit">            
         </form>
@@ -35,7 +34,7 @@
             <input type="text" id="fname" name="fname" value="John"><br>
             
             <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" value ="Doe"><br><br>
+            <input type="text" id="lname" name="lname" value ="Doe"><br><br>   <!--form con suggermiento da inserire-->
     
             <input type="submit" value="Submit">
             <input type= "reset" value="Reset">
@@ -45,12 +44,14 @@
             <input type="radio" id="male" name="gender" value="male">
             Male<br>
             
-            <input type="radio" id="female" name="gender" value="female">
+            <input type="radio" id="female" name="gender" value="female">   
             Female<br>
             
             <input type="radio" id="other" name="gender" value="other">
             Other
         </form>
+
+        <hr>
 
         <form>
             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
@@ -63,16 +64,15 @@
 
         <form>
             <label for="start">Start date:</label>
-            <input type="date" id="start" name="trip-start"
+            <input type="date" id="start" name="trip-start"         
                 value="2018-07-22"
-                min="2018-01-01" max="2018-10-22">
-        </form>
+                min="2018-01-01" max="2018-10-22">                  <!--data con valore minimo e massimo-->
 
         <form>
             <label for="cars">Choose a car:</label>
             
             <select name="cars" id="cars">
-                <option value="volvo">Volvo</option>
+                <option value="volvo">Volvo</option>            <!--tendina a scelta se si aggiunge multiple con ctrl più scelte-->
                 <option value="saab">Saab</option>
                 <option value="mercedes">Mercedes</option>
                 <option value="audi">Audi</option>
