@@ -6,7 +6,11 @@ terminati accettando come risposta S oppure N*/
 #include <stdio.h>
 int main(){
 
+    int voto=0;
+    int media=0;
     
+    printf("inserisci un voto: ");
+    scanf("%d", &voto;)
 
     return 0;
 }
