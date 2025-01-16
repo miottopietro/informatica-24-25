@@ -5,16 +5,21 @@ Definizione di numero primo: un numero si dice primo se è divisibile solo per 1
 int main(){
 
     int Nnum=0;
-    int sommaDiv=0;
+    int num=0;
     int numPrimo=0;
 
     do{
         printf("inserisci il valore di quanti numeri vuoi inserire: ");
-        scanf("%d", Nnum);
+        scanf("%d", &Nnum);
     }while(Nnum<=0);
 
     for(int i=1; i<=Nnum; i++){
-        
+        printf("inserisci un valore: ");
+        scanf("%d", &num);
+
+        if(num%num==0 && num%2!=0 && num%3!=0){
+            printf("%d è un numero primo", num);
+        }
     }
 
     return 0;
