@@ -31,11 +31,12 @@ int main(){
             printf("inserisci un valore: ");
             scanf("%d", &num4);
 
-            if(num1<num2 && num2<num3 && num3<num4 && num4<num5){
+            if(num1<num2 && num2<num3 && num3<num4){
                 printf("%d %d %d %d", num1, num2, num3, num4)
             }
+            else{
 
-            printf("");
+            }
             break;}
 
         case 1:{
@@ -48,7 +49,12 @@ int main(){
             printf("inserisci un valore: ");
             scanf("%d", &num4);
 
-            printf("");
+            if(num1>num2 && num2>num3 && num3>num4){
+                printf("%d %d %d %d", num4, num3, num2, num1)
+            }
+            else{
+
+            }
             break;}
 
         default:{
