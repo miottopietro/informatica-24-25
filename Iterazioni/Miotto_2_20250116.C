@@ -21,22 +21,20 @@ int main(){
         scanf("%d", &num2);
     }while(num2<=0);
 
-    for(int i=1; i<=num1; i++){
+    for(int i=1; i<num1; i++){
         if(num1%i==0){
             sommaDiv1+=i;
         }
     }
 
-    for(int i=1; i<=num1; i++){
+    for(int i=1; i<num1; i++){
         if(num2%i==0){
             sommaDiv2+=i;
         }
     }
 
     if(sommaDiv1==num2 && sommaDiv2==num1){
-        printf("%d e %d sono amicali.", num1, num2);
-    }else{
-        printf("%d e %d sono amici.", num1, num2);
+        printf("%d e %d sono amicali/amici.", num1, num2);
     }
 
     return 0;
