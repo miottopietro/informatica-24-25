@@ -7,7 +7,40 @@ Esempio: scelta=crescente - l’utente inserisce: 4 10 3 8 16 - numeri inseriti:
 
 int main(){
     
-    
+    int scelta=0;
+    int num=0;
+
+    print("se vuoi serie crescente digita 0.");
+    print("se vuoi serie decrescente digita 1.");
+
+    printf("scegli che serie fare: ");
+    scanf("%d", &scelta);
+
+    switch (scelta){
+        case 0:{
+            do{
+                printf("inserisci un valore: ");
+                scanf("%d", &num);
+            }while(num!=0);
+            
+            
+            printf("");
+            break;}
+
+        case 1:{
+            do{
+                printf("inserisci un valore: ");
+                scanf("%d", &num);
+            }while(num!=0);
+
+            printf("");
+            break;}
+
+        default:{
+            printf("hai inserito una scelta non valida.");
+            break;
+        }
+    }
 
     return 0;
 }
