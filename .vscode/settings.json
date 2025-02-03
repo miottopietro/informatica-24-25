@@ -94,7 +94,9 @@
         "Miotto_4_20250116.C": "cpp",
         "Miotto_2_20250116.C": "cpp",
         "Miotto_1_20250116.C": "cpp",
-        "20250123_scambio_pari_dispari.C": "cpp"
+        "20250123_scambio_pari_dispari.C": "cpp",
+        "20250203_conversione_decimale_binario2.C": "cpp",
+        "20250203_conv_dec_bin.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
