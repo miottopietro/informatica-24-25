@@ -29,7 +29,7 @@ long converti(int _num){
     while(quoz!=0){
         resto=quoz%2;
         quoz=quoz/2;
-        _conv=pow(10,cont);
+        _conv+=resto*pow(10,cont);
         cont++;
     }
     return _conv;
