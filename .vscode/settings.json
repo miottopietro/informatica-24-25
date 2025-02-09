@@ -98,7 +98,9 @@
         "20250203_conversione_decimale_binario2.C": "cpp",
         "20250203_conv_dec_bin.C": "cpp",
         "20250206_fattoriali.C": "cpp",
-        "20250206_fatt_con_puntatori.C": "cpp"
+        "20250206_fatt_con_puntatori.C": "cpp",
+        "20250203_area_cerchio_puntatori.C": "cpp",
+        "20250209_potenza_moltipilcazioni_successive.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
