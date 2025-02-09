@@ -100,7 +100,8 @@
         "20250206_fattoriali.C": "cpp",
         "20250206_fatt_con_puntatori.C": "cpp",
         "20250203_area_cerchio_puntatori.C": "cpp",
-        "20250209_potenza_moltipilcazioni_successive.C": "cpp"
+        "20250209_potenza_moltipilcazioni_successive.C": "cpp",
+        "20250209_numero_primo_1_o_0.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
