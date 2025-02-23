@@ -30,9 +30,9 @@ int main(){
     return 0;
 }
 void sequenzaCollatz(int *_num){
-    if((*_num)%2==1){
-        (*_num)-(*_num)*3+1;
+    if(*_num%2==1){
+        *_num-*_num*3+1;
     }else{
-        (*_num)/2;
+        dd*_num/2;
     }
 }
