@@ -1,7 +1,13 @@
 {
     "files.associations": {
         "20250227_equazione_2_grado.C": "cpp",
-        "20250224_triangolo_di_floyd.C": "cpp"
+        "20250224_triangolo_di_floyd.C": "cpp",
+        "fattori.C": "cpp",
+        "quadrato_somme.C": "cpp",
+        "tris.C": "cpp",
+        "20250217_funz_num_amicali.C": "cpp",
+        "20250209_numero_primo_1_o_0.C": "cpp",
+        "20250209_Sequenza_Collatz.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

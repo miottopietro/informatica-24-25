@@ -9,30 +9,32 @@ Scrivere una funzione che, dato un numero, (passando il numero per indirizzo) ca
 N.B.: nel testare il programma inserite ad esempio una volta n=7 e poi n=9*/
 
 #include <stdio.h>
-void sequenzaCollatz(int *_num);
-int main(){
 
-    int num=0;
-    int lunghezza=0;
+// Funzione per calcolare la sequenza di Collatz
+void sequenzaCollatz(int *_num) {
+    while (*_num != 1) {
+        printf("%d ", *_num);
 
-    do{
-        printf("inserisci un numero: ");
-        scanf("%d", &num);
-    }while(num<=0);
-
-    printf("la sequenza di %d é: ", num);
-
-    while(num!=1){ 
-                    sequenzaCollatz(&num);//calcola il nuovo valore della sequenza
-                    printf("%d\n", (*_num));
+        if (*_num % 2 == 0) {
+            *_num = *_num / 2;
+        } else {
+            *_num = (*_num * 3) + 1;
+        }
     }
+    printf("1\n");
+}
+
+int main() {
+    int num = 0;
+
+    do {
+        printf("Inserisci un numero positivo: ");
+        scanf("%d", &num);
+    } while (num <= 0);
+
+    printf("La sequenza di Collatz di %d è: ", num);
+
+    sequenzaCollatz(&num);
 
     return 0;
-}
-void sequenzaCollatz(int *_num){
-    if(*_num%2==1){
-        *_num-*_num*3+1;
-    }else{
-        dd*_num/2;
-    }
 }
