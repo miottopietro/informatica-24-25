@@ -1,30 +1,24 @@
-#include <stdio.h>
-
-long fattoriale(int _num);
-
-int main(){
-
-    int num=0;
-    long fatt=0;
-
-    do{
-        printf("inserisci un valore: ");
-        scanf("%d", &num);
-    }while(num<=0);
-
-    fatt=fattoriale(num);
-
-    printf("il fattoriale di %d è: %ld", num, fatt);
-
-    return 0;
-}
-    long fattoriale(int _num){
-    
-    int _fatt=1;
-
-    for(int i=1; i<=_num; i++){
-        _fatt*=i;
-    }
-
-    return _fatt;
-}
+/* Calcolare il fattoriale di un numero 
+  Es: 7!= 1*2*3*4*5*6*7     */
+  #include <stdio.h>
+  void fattoriale(int *_n,long *_fatt);
+  int main(){
+      int n=0;
+      long fatt=1;
+      
+      do{
+          printf("inserisci un numero: ");
+          scanf("%d",&n);
+      }while(n<=0);
+  
+      fattoriale(&n,&fatt);//   n parametro effettivo
+      printf("il fattoriale di %d è %ld", n, fatt);
+  
+  }
+  void fattoriale(int *_n,long *_fatt){
+     
+      for(int i=1; i<=*_n; i++){
+          *_fatt*=i;
+      }
+      
+  }
