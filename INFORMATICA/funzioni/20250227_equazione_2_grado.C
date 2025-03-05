@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-float delta(int a, int b, int c);
+float calcolodelta(int a, int b, int c);
 
 int main(){
 
@@ -20,11 +20,12 @@ int main(){
     printf("inserisci il valore di C: ");
     scanf("%d", &c);
 
-    float delta(a,b,c);
+    delta=calcolodelta(a,b,c);
+
+    printf("il delta è: %.2f", delta);
 
     return 0;
 }
-float delta(int a, int b, int c){
-    delta = (b*b)-4(a*c);
-    printf("il delta è: %f", delta);
+float calcolodelta(int a, int b, int c){
+    return (b*b)-4*(a*c);
 }
