@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "20250227_equazione_2_grado.C": "cpp"
+        "20250227_equazione_2_grado.C": "cpp",
+        "20250224_triangolo_di_floyd.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
