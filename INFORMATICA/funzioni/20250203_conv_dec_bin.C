@@ -16,7 +16,7 @@ int main(){
 
     conv=converti(num);
 
-    printf("%ld\n", conv);
+    printf("%d in binario è: %ld\n", num, conv);
 
     return 0;
 }
