@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "ripasso_funzioni.C": "cpp",
-        "introduzone.C": "cpp"
+        "introduzone.C": "cpp",
+        "multipli_2_contrario.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
