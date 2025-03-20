@@ -2,7 +2,9 @@
     "files.associations": {
         "ripasso_funzioni.C": "cpp",
         "introduzone.C": "cpp",
-        "multipli_2_contrario.C": "cpp"
+        "multipli_2_contrario.C": "cpp",
+        "inserire_vettori.C": "cpp",
+        "riempi_val_pari.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
