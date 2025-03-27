@@ -4,7 +4,11 @@
         "introduzone.C": "cpp",
         "multipli_2_contrario.C": "cpp",
         "inserire_vettori.C": "cpp",
-        "riempi_val_pari.C": "cpp"
+        "riempi_val_pari.C": "cpp",
+        "val_rand_media.C": "cpp",
+        "array_ordinato.C": "cpp",
+        ".C": "cpp",
+        "scambio_vettori.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
