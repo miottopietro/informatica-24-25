@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progetto Arduino Radar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Progetto Arduino: Radar Rilevatore Oggetti e Distanza</h1>
+    <nav>
+      <ul>
+        <li><a href="#descrizione">Descrizione</a></li>
+        <li><a href="#componenti">Componenti</a></li>
+        <li><a href="#codice">Codice</a></li>
+        <li><a href="#risultati">Risultati</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="descrizione">
+      <h2>Descrizione</h2>
+      <p>Questo progetto utilizza un sensore ultrasonico per rilevare oggetti e misurare la distanza in modo preciso.</p>
+    </section>
+    <section id="componenti">
+      <h2>Componenti</h2>
+      <ul>
+        <li>Scheda Arduino Uno</li>
+        <li>Sensore ultrasonico HC-SR04</li>
+        <li>Servo motore</li>
+        <li>Breadboard</li>
+        <li>Cavi di collegamento</li>
+      </ul>
+    </section>
+    <section id="codice">
+      <h2>Codice</h2>
+      <pre>
+        <code>
+          // Esempio di codice Arduino
+          #include &lt;Servo.h&gt;
+          Servo servo;
+
+          const int trigPin = 9;
+          const int echoPin = 10;
+
+          void setup() {
+            servo.attach(11);
+            pinMode(trigPin, OUTPUT);
+            pinMode(echoPin, INPUT);
+          }
+
+          void loop() {
+            for (int angle = 0; angle <= 180; angle += 10) {
+              servo.write(angle);
+              delay(500);
+              
+              long duration, distance;
+              digitalWrite(trigPin, LOW);
+              delayMicroseconds(2);
+              digitalWrite(trigPin, HIGH);
+              delayMicroseconds(10);
+              digitalWrite(trigPin, LOW);
+
+              duration = pulseIn(echoPin, HIGH);
+              distance = (duration / 2) / 29.1;
+
+              if (distance <= 200) {
+                // Mostra la distanza rilevata (aggiungi un display o una connessione seriale)
+              }
+            }
+          }
+        </code>
+      </pre>
+    </section>
+
+    <section id="risultati">
+      <h2>Risultati</h2>
+      <p>Il radar ruota e rileva oggetti mostrando la distanza in tempo reale.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Progetto Arduino Radar</p>
+  </footer>
+
+</body>
+</html>
+
+fammi un sito con background bianco eche rappresenti un progetto arduino di un radar che rilevi gli oggetti e la loro distanza, con una sezione che porta a dei collegamenti della pagina che sono: descrizione del progetto, i componenti utilizzati in lista puntata, una conclusione

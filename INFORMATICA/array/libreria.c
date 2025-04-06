@@ -77,3 +77,10 @@ void riempiVettoreOrdinatoCasuale(int vett[], int dim, int minimo, int massimo) 
         vett[pos] = num;
     }
 }
+
+void caricaVettore(int vett[], int dim){
+    for(int i=0; i<dim; i++){
+        printf("inserisci un valore: ");
+        scanf("%d", vett[i]);
+    }
+}
