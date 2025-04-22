@@ -109,7 +109,7 @@ void selectionSort(int vett[], int dim){
     int temp=0;
     for(int i=0; i<dim; i++){
         min=i;
-       for(int j=i+1; j<dim ;j++){
+       for(int j=i+1; j<dim; j++){
             if(vett[j]<vett[min]){
                 min=j;
             }
