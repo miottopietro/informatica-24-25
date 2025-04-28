@@ -23,8 +23,19 @@ int main(){
 
     switch (scelta){
         case 1:{
-            
+            riempiVettore(vett, DIM);
+            break;
         }
+        case 2:{
+            stampaVettore(vett, DIM, '-');
+            break;
+        }
+        case 3:{
+            bubbleSort(vett, DIM);
+            break;
+        }
+        default:
+        break;
     }
 
     }while(scelta!=0);

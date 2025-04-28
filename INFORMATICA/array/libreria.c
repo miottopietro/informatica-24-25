@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "libArray.h"
+#include "libreria.h"
 
 void scambia(int *var1, int *var2){
     int temp = *var1;
