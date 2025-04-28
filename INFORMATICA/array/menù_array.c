@@ -10,7 +10,7 @@
 
 int main(){
 
-    int vett[DIM]=0;
+    int vett[DIM];
     int scelta=0;
 
     do{
@@ -18,20 +18,24 @@ int main(){
     printf("\n1) Carica l'array");
     printf("\n2) Stampa l'array");
     printf("\n3) Ordina tramite Bubble sort");
-    printf("\n4) Dgita 0 per terminare");
+    printf("\n4) Digita 0 per terminare");
+    printf("\n \n Inserisci la scelta: ");
     scanf("%d", &scelta);
 
     switch (scelta){
         case 1:{
             riempiVettore(vett, DIM);
+            printf("\n");
             break;
         }
         case 2:{
             stampaVettore(vett, DIM, '-');
+            printf("\n");
             break;
         }
         case 3:{
             bubbleSort(vett, DIM);
+            printf("\n");
             break;
         }
         default:
