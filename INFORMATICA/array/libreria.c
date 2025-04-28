@@ -17,7 +17,7 @@ void stampaVettore(int vettore[], int dim, char sep){
 }
 void riempiVettore(int vettore[], int dim){
     for(int i=0; i<dim; i++){
-        printf("inserici v'elemento in posizione di %d: ", i);
+        printf("inserici l'elemento in posizione di %d: ", i);
         scanf("%d", &vettore[i]);
     }
 }
