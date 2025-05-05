@@ -18,7 +18,7 @@ int main(){
     printf("\n1) Carica l'array");
     printf("\n2) Stampa l'array");
     printf("\n3) Ordina tramite Bubble sort");
-    printf("\n4) Trovato il valore minimoe il valore massimo all' interno dell'array scambiare");
+    printf("\n4) Trovato il valore minimo e il valore massimo all' interno dell'array scambiare");
     printf("\n5) Digita 0 per terminare");
     printf("\n \n Inserisci la scelta: ");
     scanf("%d", &scelta);
@@ -40,7 +40,8 @@ int main(){
             break;
         }
         case 4:{
-            scambioMinMax
+            scambioMinMax(vett, DIM);
+            stampaVettore(vett, DIM, '-');
         }
         default:
         break;

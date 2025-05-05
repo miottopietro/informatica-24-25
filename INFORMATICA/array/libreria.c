@@ -156,7 +156,7 @@ void scambioMinMax(int vett[], int dim){
     for(int i=1; i<dim; i++){
         if(vett[i]<min){
             min=vett[i];
-            i_min=i;+
+            i_min=i;
         }
 
         if(vett[i]>max){
