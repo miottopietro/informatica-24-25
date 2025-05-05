@@ -146,3 +146,20 @@ void quickSort(int v[], int dim, int inizio, int fine) {
         }
     
 }
+
+void scambioMinMax(int vett[], int dim){
+    int min, max, temp;
+
+    min=vett[0];
+    max=vett[0];
+
+    for(int i=1; i<dim; i++){
+        if(vett[i]<min){
+            min=vett[i];
+        }
+        if(vett[i]>max){
+            max=vett[i];
+        }
+    }
+
+}

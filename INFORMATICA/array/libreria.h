@@ -85,3 +85,11 @@ void bubbleSort(int vett[], int dim);
  */
 
  void quickSort(int v[], int dim, int inizio, int fine);
+
+ /**
+  * funzione che scambia valore minimo e massimo
+  * @param int[]vettore in ingresso
+  * @param int dimensione del vettore
+  */
+
+  void scambioMinMax(int vett[], int dim);
