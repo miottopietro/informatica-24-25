@@ -36,6 +36,7 @@ int main(){
         }
         case 3:{
             bubbleSort(vett, DIM);
+            stampaVettore(vett, DIM, '-');
             printf("\n");
             break;
         }
