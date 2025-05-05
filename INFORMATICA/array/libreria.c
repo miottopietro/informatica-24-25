@@ -148,7 +148,9 @@ void quickSort(int v[], int dim, int inizio, int fine) {
 }
 
 void scambioMinMax(int vett[], int dim){
-    int min, max, i_min, i_max;
+    int min, max;
+    int i_min=0;
+    int i_max=0;
 
     min=vett[0];
     max=vett[0];
