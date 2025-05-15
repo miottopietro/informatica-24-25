@@ -15,9 +15,9 @@ void stampa_griglia() {
 }
 void posiziona_nave(int lunghezza) {
     int x, y, direzione;
-    printf("Posizione iniziale (x y): ");
+    printf("Posizione iniziale (y x): ");
     scanf("%d %d", &x, &y);
-    printf("Direzione (0 = orizzontale, 1 = verticale): ");
+    printf("Direzione (1 = orizzontale, 0 = verticale): ");
     scanf("%d", &direzione);
     if (direzione == 0 && x + lunghezza <= DIM) {
         for (int i = 0; i < lunghezza; i++)
