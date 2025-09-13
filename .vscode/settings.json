@@ -9,7 +9,8 @@
         "array_ordinato.C": "cpp",
         ".C": "cpp",
         "scambio_vettori.C": "cpp",
-        "20241114_stampa_5_valori.C": "cpp"
+        "20241114_stampa_5_valori.C": "cpp",
+        "stdio.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
