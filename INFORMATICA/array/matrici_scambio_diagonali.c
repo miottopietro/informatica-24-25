@@ -14,30 +14,30 @@ int main() {
     scanf("%d", &col);
 
     printf("Inserisci gli elementi della matrice:\n");
-    for (i=0; i<rig; i++) {
-        for (j=0; j<col; j++) {
+    for(i=0; i<rig; i++){
+        for(j=0; j<col; j++){
             printf("Elemento [%d][%d]: ", i, j);
             scanf("%d", &matrice[i][j]);
         }
     }
 
     printf("Matrice originale:\n");
-    for (i=0; i<rig; i++) { 
-        for (j=0; j<col; j++) {
+    for(i=0; i<rig; i++){ 
+        for(j=0; j<col; j++){
             printf("%d\t", matrice[i][j]);
         }
         printf("\n");
     }
 
-    for (i=0; i<rig; i++) {
+    for(i=0; i<rig; i++){
         temp = matrice[i][i];
         matrice[i][i] = matrice[i][col-i-1];
         matrice[i][col-i-1] = temp;
     }
 
     printf("Matrice dopo lo scambio delle diagonali:\n");
-    for (i=0; i<rig; i++) {
-        for (j=0; j<col; j++) {
+    for(i=0; i<rig; i++){
+        for(j=0; j<col; j++){
             printf("%d\t", matrice[i][j]);
         }
         printf("\n");
