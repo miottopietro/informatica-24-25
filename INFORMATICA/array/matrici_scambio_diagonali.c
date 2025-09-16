@@ -13,7 +13,6 @@ int main() {
     printf("Inserisci il numero di colonne (max 10): ");
     scanf("%d", &col);
 
-    // Input della matrice
     printf("Inserisci gli elementi della matrice:\n");
     for (i=0; i<rig; i++) {
         for (j=0; j<col; j++) {
@@ -22,7 +21,6 @@ int main() {
         }
     }
 
-    // Output della matrice originale
     printf("Matrice originale:\n");
     for (i=0; i<rig; i++) { 
         for (j=0; j<col; j++) {
@@ -31,14 +29,12 @@ int main() {
         printf("\n");
     }
 
-    // Scambio delle diagonali
     for (i=0; i<rig; i++) {
         temp = matrice[i][i];
         matrice[i][i] = matrice[i][col-i-1];
         matrice[i][col-i-1] = temp;
     }
 
-    // Output della matrice modificata
     printf("Matrice dopo lo scambio delle diagonali:\n");
     for (i=0; i<rig; i++) {
         for (j=0; j<col; j++) {
