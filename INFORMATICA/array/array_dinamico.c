@@ -73,7 +73,7 @@ int main() {
                     }
                 }
             }
-            // Visualizza
+            // Visualizza l'array ordinato
             printf("Numeri ordinati:\n");
             for (i = 0; i < dimensione; i++){
             	printf("%d ", numeri[i]);
@@ -92,7 +92,7 @@ int main() {
                 }
             }
             if (trovato != -1) {
-                for (i = trovato; i < dimensione - 1; i++)
+                for (i = trovato; i < dimensione - 1; i++) // sposta gli elementi da destra verso sinistra eliminando un elemento
                     numeri[i] = numeri[i+1];
                 dimensione--;
                 numeri = realloc(numeri, dimensione * sizeof(int));
