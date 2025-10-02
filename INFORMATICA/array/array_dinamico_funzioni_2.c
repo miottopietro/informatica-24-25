@@ -19,7 +19,7 @@ int* creaVett(int _n){
 }
 
 int* inserisciValori(int *_vettore, int _n){
-    for(int i=0; i<n; i++){
+    for(int i=0; i<_n; i++){
         printf("Inserisci il valore %d: ", i+1);
         scanf("%d", &_vettore[i]);
     }
@@ -28,7 +28,7 @@ int* inserisciValori(int *_vettore, int _n){
 
 void stampaVett(int *_vettore, int _n){
     printf("Hai inserito i seguenti elementi: : ");
-    for(int i=0; i<n; i++){
+    for(int i=0; i<_n; i++){
         printf("%d ", _vettore[i]);
     }
     printf("\n");
@@ -53,21 +53,30 @@ int *estraiDispari(int *_vettore, int _n, int *_dimDispari){
             if(_vettore[i]%2!=0){
                 (*_dimDispari)++;
                 int *tmp=realloc(_dispari, (*_dimDispari)*sizeof(int));
-                if()
+                if(tmp==NULL){
+                    printf("Errore di allocazione!\n");
+                    free(_dispari);
+                    return NULL;
+                }
+                _dispari=tmp;
+                _dispari[(*_dimDispari)-1]=_vettore[i];
             }
         }
-    
+    return _dispari;
 }
 
 int main() {
 
     int *vettore=NULL; //puntatore al vettore
     int n=0;
-
+    int *dispari=NULL; //puntatore al vettore contenente i dispari
+    int dimDispari=0; //dimensione del vettore contenente i dispari
+    
     do{
         printf("Inserisci la quantità degli elementi: ");
         scanf("%d", &n);
-    }
+    }while(n<0);
+
     vettore=creaVett(n);
     vettore=inserisciValori(vettore, n);
     stampaVett(vettore, n);
@@ -76,6 +85,9 @@ int main() {
     //creiamo l'array contenente i valori dispari tramite la realloc
 
     dispari=estraiDispari(vettore, n, &dimDispari);
-
+    printf("l'array contenente gli elementi dispari risulta: ");
+    stampaVett(dispari, dimDispari);
+    free(vettore);
+    free(dispari);
     return 0;
 }
