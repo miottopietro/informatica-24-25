@@ -1,82 +1,75 @@
-/*
-Scrivi un programma in C che:
-1. Chiede all'utente quanti numeri interi vuole inserire;
-2. Alloca dinamicamente un array di quella dimensione con malloc();
-3. Permette all'utente di inserire i numeri;
-4. Chiede all'utente se vuole aumentare la dimensione dell'array;
-    -Se si, richiede la nuova dimensione e usa realloc() per ridimensionarlo;
-    -Permette quindi di inserire i nuovi valori negli spazi aggiunti;
-5. Infine, stampa tutti gli elementi dell'array.
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int* creaVett(int _dim){
-    int* _vettore=(int*)malloc(_dim*sizeof(int));
-    if(_vettore==NULL){
+int* creaVett(int dim) {
+    int* vettore = (int*)malloc(dim * sizeof(int));
+    if (vettore == NULL) {
         printf("Errore di allocazione!\n");
-        return NULL;
+        exit(1);
     }
-    return _vettore;
+    return vettore;
 }
 
-int* inserisciValori(int *_vettore, int _dim){
-    for(int i=0; i<_dim; i++){
-        printf("Inserisci il valore %d: ", i+1);
-        scanf("%d", &_vettore[i]);
+void inserisciValori(int* vettore, int start, int end) {
+    for (int i = start; i < end; i++) {
+        printf("Inserisci il valore %d: ", i + 1);
+        scanf("%d", &vettore[i]);
     }
-    return _vettore;
 }
 
-void stampaVett(int *_vettore, int _dim){
-    printf("Hai inserito i seguenti elementi: : ");
-    for(int i=0; i<_dim; i++){
-        printf("%d ", _vettore[i]);
+void stampaVett(int* vettore, int dim) {
+    printf("Hai inserito i seguenti elementi: ");
+    for (int i = 0; i < dim; i++) {
+        printf("%d ", vettore[i]);
     }
     printf("\n");
 }
 
- int* aumentaDim(int *_vettore, int _dim){
-        int nuovaDim=0;
-        int *_aumenta=NULL;
-        do{
-            printf("inserisci una nuova dimensione: ");
-            scanf("%d", &nuovaDim);
-            _aumenta=(int*)realloc(_vettore, nuovaDim *sizeof(int));
-            for(int i=_dim; i<nuovaDim; i++){
-                printf("inserisci nuovi valori: ");
-                scanf("%d", &_aumenta[i]);
-            }
+int* aumentaDim(int* vettore, int* dim) {
+    int nuovaDim;
+    printf("Inserisci la nuova dimensione: ");
+    scanf("%d", &nuovaDim);
 
-        }while(nuovaDim!=_dim);
-        return _aumenta;
+    if (nuovaDim <= *dim) {
+        printf("La nuova dimensione deve essere maggiore di quella attuale.\n");
+        return vettore;
     }
 
-int main(){
+    int* nuovoVettore = (int*)realloc(vettore, nuovaDim * sizeof(int));
+    if (nuovoVettore == NULL) {
+        printf("Errore di riallocazione!\n");
+        exit(1);
+    }
 
-    int *vettore=NULL;
-    int dim=0;
-    int scelta=0;
+    inserisciValori(nuovoVettore, *dim, nuovaDim);
+    *dim = nuovaDim;
+    return nuovoVettore;
+}
 
-    do{
-        printf("quanti elementi vuoi all'interno dell'array: ");
+int main() {
+    int* vettore = NULL;
+    int dim = 0;
+    int scelta = 0;
+
+    do {
+        printf("Quanti elementi vuoi inserire? ");
         scanf("%d", &dim);
-    }while(dim<0);
+    } while (dim <= 0);
 
-    vettore=creaVett(dim);
-    vettore=inserisciValori(vettore, dim);
+    vettore = creaVett(dim);
+    inserisciValori(vettore, 0, dim);
     stampaVett(vettore, dim);
 
-    printf("inserisci 1 se vuoi aumentare la dimensione del array? ");
+    printf("Vuoi aumentare la dimensione dell'array? (1 = si, 0 = no): ");
     scanf("%d", &scelta);
 
-    if(scelta==1){
-        vettore=aumentaDim(vettore, dim);
+    if (scelta == 1) {
+        vettore = aumentaDim(vettore, &dim);
         stampaVett(vettore, dim);
-    }else{
-        printf("uscita.");
+    } else {
+        printf("Uscita.\n");
     }
 
+    free(vettore);
     return 0;
 }
