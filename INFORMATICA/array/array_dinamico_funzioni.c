@@ -17,6 +17,7 @@ int* creaVettore(int _dim){
         printf("errore nell'allocazione");
         return 1;
     }
+    return _vettore;
 }
 
 int* inserisciValori(int *_vettore, int _dim){
