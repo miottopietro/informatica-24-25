@@ -44,6 +44,20 @@ int* aumentaDimensione(int *_vettore, int *_dim){
     return _vettore;
 }
 
+void ordinaArray(int *_vettore, int _dim){
+    for(int i=0; i<_dim-1; i++) {
+        for(int j=0; j<_dim-i-1; j++) {
+
+            if(_vettore[j]>_vettore[j+1]){
+                int temp=_vettore[j];
+                _vettore[j]=_vettore[j+1];
+                _vettore[j+1] = temp;
+            }
+        }
+    }
+    printf("array ordinato con bubble sort.\n");
+}
+
 void stampaVettore(int *_vettore, int _dim){
 
     printf("hai inserito i seguenti valori: ");
@@ -62,12 +76,13 @@ int main(){
 
     do{
 
-        printf("menù:\n");
+        printf("MENU':\n");
         printf("1: crea array\n");
         printf("2: inserisci valori\n");
         printf("3: aumenta la dimensione\n");
-        printf("4: stampa array\n");
-        printf("5: esci dal programma\n");
+        printf("4: ordinaArray\n");
+        printf("5: stampa array\n");
+        printf("6: esci dal programma\n");
 
         printf("scelta: ");
         scanf("%d", &scelta);
@@ -107,6 +122,16 @@ int main(){
 
                 if(vettore==NULL){
                     printf("prima devi creare l'array.\n");
+                }else{
+                    ordinaArray(vettore, dim);
+                }
+
+            break;
+
+            case 5:
+
+                if(vettore==NULL){
+                    printf("prima devi creare l'array.\n");
                 }
                 else{
                     stampaVettore(vettore, dim);
@@ -114,14 +139,14 @@ int main(){
 
             break;
 
-            case 5:
+            case 6:
 
-            printf("sei uscito dal programma.");
+                printf("sei uscito dal programma.\n");
 
             break;
 
             default:
-            printf("le scelte vanno da 1 a 4.\n");
+            printf("le scelte vanno da 1 a 6.\n");
 
         }
 
