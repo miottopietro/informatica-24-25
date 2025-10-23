@@ -14,5 +14,6 @@
         "20241014_poker.C": "cpp",
         "20241022_calcolatrice.C": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "liveServer.settings.port": 5502
 }
