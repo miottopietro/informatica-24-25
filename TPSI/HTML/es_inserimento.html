@@ -9,50 +9,67 @@
 -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Javascript</title>
-        <style>
-            #output{
-                width: 400px;
-                height: 300px;
-                border: 2px solid black;
-            }
-            
-            
-        </style>
-        <script>
-            function scrivi() {
-                documento.getElementById("output").innerHTML = messaggio.value;
-            }
-            function cambiaColore() {
-                var msg=document.getElementById("messaggio").value;
-                var colore=document.getElementById("colore").value;
-                documento.getElementById("output").innerHTML = msg;
-                documento.getElementById("output").style.colore = colore;
-            }
-            function allargaCarattere() {
-                dimCarattere++;
-                document.getElementById("output").style.fontSize=dimCarattere + "px";
-            }
-        </script>
-        
-    </head>
-    <body>
-        <form name="moduli">
-            <label>lascia un commento</label>
-            <input type="text" id="messaggio" name="messaggio" maxlength="200"></input>
-            </br><br></br>
-            <label>inserisci un colore</label>
-            <input type="text" id="colore" name="colore" maxlength="200"></input>
-            </br><br></br>
-            <input type="button" value="Reporta il testo" onclick="scrivi();">
-            </input>
-            <br></br>
-            <input type="button" value="cambia colore del testo" onclick="cambiaColore();">
-            </input>
-            <input type="button" value="aumenta carattere" onclick="allargaCarattere();">
-            </input>
-            <div id="output"></div>
-        </form>     
-    </body>
+<head>
+    <title>Javascript</title>
+    <style>
+        #output {
+            width: 400px;
+            height: 300px;
+            border: 2px solid black;
+            font-size: 15px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        var dimCarattere = 15;
+
+        function scrivi(){
+            var msg=document.getElementById("messaggio").value;
+            document.getElementById("output").innerHTML = msg;
+        }
+
+        function cambiaColore(){
+            var colore=document.getElementById("colore").value;
+            document.getElementById("output").style.color = colore;
+        }
+
+        function allargaCarattere(){
+            dimCarattere++;
+            document.getElementById("output").style.fontSize = dimCarattere + "px";
+        }
+
+        function diminuisciCarattere(){
+            dimCarattere--;
+            document.getElementById("output").style.fontSize = dimCarattere + "px";
+        }
+
+        function aumentaContenitore(){
+            var output=document.getElementById("output");
+            var currentWidth=output.offsetWidth;
+            var currentHeight=output.offsetHeight;
+
+            output.style.width=(currentWidth + 50) + "px";
+            output.style.height=(currentHeight + 50) + "px";
+        }
+
+    </script>
+</head>
+<body>
+    <form name="moduli">
+        <label>Lascia un commento</label><br>
+        <input type="text" id="messaggio" name="messaggio" maxlength="200"><br><br>
+
+        <label>Inserisci un colore</label><br>
+        <input type="text" id="colore" name="colore" maxlength="200"><br><br>
+
+        <input type="button" value="Reporta il testo" onclick="scrivi();">
+        <input type="button" value="Cambia colore del testo" onclick="cambiaColore();">
+        <input type="button" value="Aumenta carattere" onclick="allargaCarattere();">
+        <input type="button" value="Diminuisci carattere" onclick="diminuisciCarattere();">
+
+        <input type="button" value="Aumenta contenitore" onclick="aumentaContenitore();">
+
+        <div id="output"></div>
+    </form>
+</body>
 </html>
