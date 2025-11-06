@@ -52,6 +52,15 @@
             output.style.height=(currentHeight + 50) + "px";
         }
 
+        function diminuisciContenitore(){
+            var output=document.getElementById("output");
+            var currentWidth=output.offsetWidth;
+            var currentHeight=output.offsetHeight;
+
+            output.style.width=(currentWidth - 50) + "px";
+            output.style.height=(currentHeight - 50) + "px";
+        }
+
     </script>
 </head>
 <body>
@@ -64,11 +73,13 @@
 
         <input type="button" value="Reporta il testo" onclick="scrivi();">
         <input type="button" value="Cambia colore del testo" onclick="cambiaColore();">
+        <br><br>
         <input type="button" value="Aumenta carattere" onclick="allargaCarattere();">
         <input type="button" value="Diminuisci carattere" onclick="diminuisciCarattere();">
-
+        <br><br>
         <input type="button" value="Aumenta contenitore" onclick="aumentaContenitore();">
-
+        <input type="button" value="Diminuisci contenitore" onclick="diminuisciContenitore();"
+        <br><br>
         <div id="output"></div>
     </form>
 </body>
