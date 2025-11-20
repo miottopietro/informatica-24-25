@@ -1,0 +1,1 @@
+/*data una stringa trovare una sottostringa senza utilizzare la libreria string*/

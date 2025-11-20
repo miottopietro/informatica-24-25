@@ -12,40 +12,50 @@ Per il controllo di nome, cognome e data, si suggerisce di leggere l’input car
 #include <stdlib.h>
 #include <string.h>
 
-typedef char* String;
+typedef char* Stringa;
 
+void Cognome(Stringa _Cognome){
+    int len=0;
+    len=strlen(_Cognome);
+    for(int i=0; i<len; i++){
+        if(_Cognome[i]!='A','E','I','O','U','a','i','o','u')
+            _Cognome[i]=_Cognome[i];
+    }
+    realloc(_Cognome, 4*sizeof(char)); 
+}
+
+void Nome(Stringa _Nome){
+    int len=0;
+    len=strlen(_Nome);
+    for(int i=0; i<len; i++){
+        if(_Nome[i]!='A','E','I','O','U','a','i','o','u')
+            _Nome[i]=_Nome[i];
+    }
+    realloc(_Nome,4*sizeof(char));
+}
 
 
 int main(){
+    char Codice[17];
+    char Cognome[30];
+    char Nome[30];
+    int Giorno=0;
+    char mese[30];
+    char anno[4];
+    Stringa Comune="G186";
 
-    String Nome=NULL;
-    String Cognome=NULL;
-    String DataNascita=NULL;
-    char Sesso=0;
-    char codiceComune[]="G186"
-    int dim=0;
+    printf("Inserisci il tuo cognome:\n");
+    fgets(Nome, 30, stdin);
+    printf("Inserisci il tuo nome:\n");
+    fgets(Cognome, 30, stdin);
+    printf("Inserisci il tuo giorno di nascita(se ha una cifra aggiungi 0): \n");
+    scanf("%d", &Giorno);
+    printf("Inserisci il tuo mese di nascita:\n");
+    fgets(mese, 30, stdin);
+    printf("Inserisci il tuo anno di nascita: \n");
+    fgets(anno, 4, stdin);
 
-    Nome=(String)malloc(30*sizeof(char));
-    if(Nome==NULL){
-        printf("Errore allocazione\n");
-        return 1;
-    }
-    printf("Inserisci il Nome: ");
-    i=0;
-    while(1){
-        Nome[i]=getchar();
-        if(Nome[i]=='\n'){
-            Nome[i]='\0';
-            break;
-        }
-        if((Nome[i]<'A' || Nome[i]>'Z') && (Nome[i]<'a' || Nome[i]>'z')){
-            printf("il nome deve contenere solo lettere.\n");
-            free(Nome);
-            return 1;
-        }
-        i++;
-    }  
-    
+    printf("il codice fiscale è: %s%s%d%s%s", Cognome, Nome, Giorno, mese, anno);
 
     return 0;
 }
