@@ -12,7 +12,10 @@
         "20241114_stampa_5_valori.C": "cpp",
         "stdio.h": "c",
         "20241014_poker.C": "cpp",
-        "20241022_calcolatrice.C": "cpp"
+        "20241022_calcolatrice.C": "cpp",
+        "20240926_costo_teatro.C": "cpp",
+        "20240926_costo_cinema.C": "cpp",
+        "20241001_N_divisibile_3e5.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "liveServer.settings.port": 5502

@@ -1,0 +1,24 @@
+<!--
+    1) predisporre la pagina HTML
+        - creare un input type per l'inserimento del valore
+        - pulsante che al clock mi controlli se ho indovinato
+-->
+<!DOCTYPE html>
+<html>
+    <head><title>INDOVINA NUMERO</title>
+        <script>
+            var ind= 12;
+            function Resetta() {
+                document.getElement.byId("num").value = "";
+                document.bgcolor="white";
+            }
+        </script>
+    </head>
+<body>
+    <label>Inserisci il numero:</label>
+    <input type="text" id="num">    
+    <input type="button" value="controlla numero inserito" onclick="check();">  
+    <input type="button" value="Reset" onclick="resetta();">
+</body>
+
+</html
