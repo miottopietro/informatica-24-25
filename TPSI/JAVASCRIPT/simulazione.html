@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 300px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+        }
+
+        #carta {
+            margin-top: 20px;
+            padding: 15px;
+            background: #d9f0ff;
+            border-radius: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registrazione</h2>
+
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="text" id="cognome" placeholder="Cognome">
+
+    <select id="sesso">
+        <option value="">Sesso</option>
+        <option value="Maschio">Maschio</option>
+        <option value="Femmina">Femmina</option>
+        <option value="Altro">Altro</option>
+    </select>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="tel" id="telefono" placeholder="Telefono">
+
+    <button onclick="generaCarta()">Invia dati</button>
+
+    <div id="carta">
+        <h3>Dati dell'utente:</h3>
+        <p><strong>Nome:</strong> <span id="outNome"></span></p>
+        <p><strong>Cognome:</strong> <span id="outCognome"></span></p>
+        <p><strong>Sesso:</strong> <span id="outSesso"></span></p>
+        <p><strong>Email:</strong> <span id="outEmail"></span></p>
+        <p><strong>Telefono:</strong> <span id="outTelefono"></span></p>
+    </div>
+</div>
+
+<script>
+    function generaCarta() {
+        let nome = document.getElementById("nome").value;
+        let cognome = document.getElementById("cognome").value;
+        let sesso = document.getElementById("sesso").value;
+        let email = document.getElementById("email").value;
+        let telefono = document.getElementById("telefono").value;
+
+        if (!nome || !cognome || !sesso || !email || !telefono) {
+            alert("Compila tutti i campi!");
+            return;
+        }
+
+        document.getElementById("outNome").textContent = nome;
+        document.getElementById("outCognome").textContent = cognome;
+        document.getElementById("outSesso").textContent = sesso;
+        document.getElementById("outEmail").textContent = email;
+        document.getElementById("outTelefono").textContent = telefono;
+
+        document.getElementById("carta").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
+

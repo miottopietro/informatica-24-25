@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h2>Somma di due numeri</h2>
+
+    <input id="num1" type="number" placeholder="Primo numero">
+    <br>
+    <input id="num2" type="number" placeholder="Secondo numero">
+
+    <br><br>
+
+    <button id="sommaBtn">Calcola somma</button>
+    <button id="verificaBtn">Pari o Dispari</button>
+
+    <p>Risultato: <span id="risultato">0</span></p>
+
+    <div id="box" style="width:200px; height:50px; border:1px solid black; text-align:center;">
+      Risultato
+    </div>
+
+    <script>
+      // Selezioniamo gli elementi
+      const input1 = document.getElementById("num1");
+      const input2 = document.getElementById("num2");
+      const risultato = document.getElementById("risultato");
+      const box = document.getElementById("box");
+
+      const sommaBtn = document.getElementById("sommaBtn");
+      const verificaBtn = document.getElementById("verificaBtn");
+
+      // Calcolo della somma
+      sommaBtn.addEventListener("click", function () {
+        const valore1 = parseInt(input1.value) || 0;
+        const valore2 = parseInt(input2.value) || 0;
+
+        const somma = valore1 + valore2;
+        risultato.textContent = somma;
+      });
+
+      // Verifica pari o dispari
+      verificaBtn.addEventListener("click", function () {
+        const valore = parseInt(risultato.textContent);
+
+        if (valore % 2 === 0) {
+          box.style.backgroundColor = "lightgreen";
+          alert("Il numero è PARI");
+        } else {
+          box.style.backgroundColor = "lightcoral";
+          alert("Il numero è DISPARI");
+        }
+      });
+    </script>
+
+  </body>
+</html>

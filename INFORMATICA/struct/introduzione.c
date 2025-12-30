@@ -4,13 +4,15 @@ ai campi in modalità variabile e in puntatore alla struttura*/
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct{
+typedef struct
+{
     char nome[20];
     char cognome[20];
     int eta;
-}persona;
+} persona;
 
-int main(){
+int main()
+{
     persona p1;
     persona *p2;
 
@@ -18,7 +20,7 @@ int main(){
     printf("inserisci il nome della persona: ");
     scanf("%s", p1.nome);
     fflush(stdin);
-    
+
     printf("inserisci il cognome della persona: ");
     scanf("%s", p1.cognome);
     fflush(stdin);
@@ -30,12 +32,12 @@ int main(){
     printf("dati della persona: %s, %s, %d\n", p1.nome, p1.cognome, p1.eta);
 
     // inseriamo le informazioni in p2
-    p2=malloc(sizeof(persona));
+    p2 = malloc(sizeof(persona));
 
     printf("inserisci il nome dell'altra persona: ");
     scanf("%s", p2->nome);
     fflush(stdin);
-    
+
     printf("inserisci il cognome dell'altra persona: ");
     scanf("%s", p2->cognome);
     fflush(stdin);
