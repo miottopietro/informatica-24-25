@@ -1,93 +1,90 @@
 <html>
 <head>
 <script language="javascript">
-
-    // FUNZIONI PER LO SFONDO DELLA PAGINA
-    function rosso() {
-        document.bgColor = "red";
-    }
-
-    function verde() {
-        document.bgColor = "green";
-    }
-
-    function blu() {
-        document.bgColor = "blue";
-    }
-
-    // FUNZIONE PER LA SOMMA
-    function somma() {
-        var a = parseInt(document.modulo.num1.value);
-        var b = parseInt(document.modulo.num2.value);
-
-        document.modulo.risultato.value = a + b;
-    }
-
-    // FUNZIONE PARI / DISPARI
-    function verifica() {
-        var s = parseInt(document.modulo.risultato.value);
-
-        if (s % 2 == 0) {
-            document.modulo.box.style.backgroundImage =
-                "url('../IMMAGINI/img2verde.jpg')";
-            document.modulo.box.style.backgroundSize = "cover";
-            verde();
-            alert("Il numero è PARI");
-        } else {
-            document.modulo.box.style.backgroundImage =
-                "url('../IMMAGINI/img1rosso.jpg')";
-            document.modulo.box.style.backgroundSize = "cover";
-            rosso();
-            alert("Il numero è DISPARI");
-        }
-    }
-
-</script>
-</head>
-
-<body>
-
-<form name="modulo">
-
-    <table border="2">
-        <tr>
-            <td>
-                <img src="../IMMAGINI/img1rosso.jpg" onclick="rosso();">
-            </td>
-            <td>
-                <img src="../IMMAGINI/img2verde.jpg" onclick="verde();">
-            </td>
-            <td>
-                <img src="../IMMAGINI/img3blu.jpg" onclick="blu();">
-            </td>
-        </tr>
-    </table>
-
-    <br><br>
-
-    Primo numero:
-    <input type="text" name="num1"><br><br>
-
-    Secondo numero:
-    <input type="text" name="num2"><br><br>
-
-    <input type="button" value="Somma" onclick="somma();">
-    <input type="button" value="Pari o Dispari" onclick="verifica();">
-
-    <br><br>
-
-    Risultato:
-    <input type="text" name="risultato" readonly>
-
-    <br><br>
-
-    <!-- DIV RISULTATO -->
-    <div name="box"
-         style="width:200px; height:50px; border:1px solid black; text-align:center;">
-        Risultato
-    </div>
-
-</form>
-
-</body>
-</html>
+    
+function rosso() {
+    document.bgColor = "red";
+}
+                        
+                        function verde() {
+                                document.bgColor = "green";
+                                    }
+                                    
+ function blu() {
+         document.bgColor = "blue";
+             }
+             
+                     function somma() {
+                             var a = parseInt(document.modulo.num1.value);
+                                     var b = parseInt(document.modulo.num2.value);
+                                     
+ document.modulo.risultato.value = a + b;
+     }
+ 
+             function verifica() {
+                     var s = parseInt(document.modulo.risultato.value);
+                     
+                             if (s % 2 == 0) {
+                                         document.modulo.box.style.backgroundImage =
+                                                         "url('../IMMAGINI/img2verde.jpg')";
+                                                                     document.modulo.box.style.backgroundSize = "cover";
+   verde();
+               alert("Il numero è PARI");
+                       } else {
+                                   document.modulo.box.style.backgroundImage =
+                                                   "url('../IMMAGINI/img1rosso.jpg')";
+       document.modulo.box.style.backgroundSize = "cover";
+                   rosso();
+                               alert("Il numero è DISPARI");
+                                       }
+                                           }
+                                           
+                                           </script>
+                                           </head>
+                                           
+                                           <body>
+                                           
+                                           <form name="modulo">
+                                           
+                                               <table border="2">
+                                                       <tr>
+                                                                   <td>
+                                                                                   <img src="../IMMAGINI/img1rosso.jpg" onclick="rosso();">
+                                                                                               </td>
+                                                                                                           <td>
+                                                                                                                           <img src="../IMMAGINI/img2verde.jpg" onclick="verde();">
+                                                                                                                                       </td>
+                                                                                                                                                   <td>
+                                                                                                                                                                   <img src="../IMMAGINI/img3blu.jpg" onclick="blu();">
+                                                                                                                                                                               </td>
+                                                                                                                                                                                       </tr>
+                                                                                                                                                                                           </table>
+                                                                                                                                                                                           
+                                                                                                                                                                                               <br><br>
+                                                                                                                                                                                               
+                                                                                                                                                                                                   Primo numero:
+                                                                                                                                                                                                       <input type="text" name="num1"><br><br>
+                                                                                                                                                                                                       
+                                                                                                                                                                                                           Secondo numero:
+                                                                                                                                                                                                               <input type="text" name="num2"><br><br>
+                                                                                                                                                                                                               
+                                                                                                                                                                                                                   <input type="button" value="Somma" onclick="somma();">
+                                                                                                                                                                                                                       <input type="button" value="Pari o Dispari" onclick="verifica();">
+                                                                                                                                                                                                                       
+                                                                                                                                                                                                                           <br><br>
+                                                                                                                                                                                                                           
+                                                                                                                                                                                                                               Risultato:
+                                                                                                                                                                                                                                   <input type="text" name="risultato" readonly>
+                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                       <br><br>
+                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                               <div name="box"
+                                                                                                                                                                                                                                                        style="width:200px; height:50px; border:1px solid black; text-align:center;">
+                                                                                                                                                                                                                                                                Risultato
+                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    </form>
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    </body>
+                                                                                                                                                                                                                                                                    </html>>
+                                                                                                                                                                                                                                                                    
