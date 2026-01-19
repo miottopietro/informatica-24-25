@@ -615,3 +615,241 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+
+/*struct annidata*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    char nome[20];
+    char ruolo[20];
+    int gol;
+} Giocatore;
+
+typedef struct {
+    char nome[20];
+    char citta[20];
+    int punti;
+    Giocatore capitano;
+} Squadra;
+
+void clearBuffer() {
+    char c;
+    while ((c = getchar()) != '\n') {}
+}
+
+void riempiGiocatore(Giocatore *g) {
+    printf("Inserisci nome capitano: ");
+    fgets(g->nome, 20, stdin);
+
+    printf("Inserisci ruolo capitano: ");
+    fgets(g->ruolo, 20, stdin);
+
+    printf("Inserisci numero di gol del capitano: ");
+    scanf("%d", &g->gol);
+    clearBuffer();
+}
+
+void riempiSquadra(Squadra *s) {
+    printf("Inserisci nome squadra: ");
+    fgets(s->nome, 20, stdin);
+
+    printf("Inserisci citta squadra: ");
+    fgets(s->citta, 20, stdin);
+
+    printf("Inserisci punti squadra: ");
+    scanf("%d", &s->punti);
+    clearBuffer();
+
+    printf("--- DATI CAPITANO ---\n");
+    riempiGiocatore(&s->capitano);
+}
+
+void stampaSquadra(Squadra s) {
+    printf("Nome squadra: %s", s.nome);
+    printf("Citta: %s", s.citta);
+    printf("Punti: %d\n", s.punti);
+
+    printf("Capitano:\n");
+    printf(" Nome: %s", s.capitano.nome);
+    printf(" Ruolo: %s", s.capitano.ruolo);
+    printf(" Gol segnati: %d\n", s.capitano.gol);
+}
+
+int main() {
+    Squadra *squadre;
+    int n;
+
+    do {
+        printf("Inserisci numero di squadre (max 10): ");
+        scanf("%d", &n);
+        clearBuffer();
+
+        if (n <= 0 || n > 10)
+            printf("Numero non valido.\n");
+    } while (n <= 0 || n > 10);
+
+    squadre = (Squadra *)malloc(n * sizeof(Squadra));
+
+    for (int i = 0; i < n; i++) {
+        printf("\nINSERISCI SQUADRA %d\n", i + 1);
+        riempiSquadra(&squadre[i]);
+    }
+
+    printf("\n--- SQUADRE CHE SODDISFANO LA CONDIZIONE ---\n");
+    for (int i = 0; i < n; i++) {
+        if (squadre[i].punti > 50 && squadre[i].capitano.gol > 10) {
+            printf("\n************************\n");
+            stampaSquadra(squadre[i]);
+        }
+    }
+
+    free(squadre);
+    return 0;
+}
+
+
+
+
+
+
+/*esercizio infame*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* -------- STRUCT -------- */
+
+typedef struct {
+    char nome[20];
+    char settore[30];
+    int pubblicazioni;
+} Ricercatore;
+
+typedef struct {
+    char titolo[30];
+    float budget;
+    int durata;
+    Ricercatore responsabile;
+} Progetto;
+
+typedef struct {
+    char nome[20];
+    char citta[20];
+    int dipendenti;
+    Progetto progetto;
+} Laboratorio;
+
+/* -------- FUNZIONI DI SUPPORTO -------- */
+
+void clearBuffer() {
+    char c;
+    while ((c = getchar()) != '\n') {}
+}
+
+/* -------- RIEMPIMENTO -------- */
+
+void riempiRicercatore(Ricercatore *r) {
+    printf("Nome ricercatore: ");
+    fgets(r->nome, 20, stdin);
+
+    printf("Settore di ricerca: ");
+    fgets(r->settore, 30, stdin);
+
+    printf("Numero pubblicazioni: ");
+    scanf("%d", &r->pubblicazioni);
+    clearBuffer();
+}
+
+void riempiProgetto(Progetto *p) {
+    printf("Titolo progetto: ");
+    fgets(p->titolo, 30, stdin);
+
+    printf("Budget progetto: ");
+    scanf("%f", &p->budget);
+
+    printf("Durata progetto (mesi): ");
+    scanf("%d", &p->durata);
+    clearBuffer();
+
+    printf("--- DATI RICERCATORE RESPONSABILE ---\n");
+    riempiRicercatore(&p->responsabile);
+}
+
+void riempiLaboratorio(Laboratorio *l) {
+    printf("Nome laboratorio: ");
+    fgets(l->nome, 20, stdin);
+
+    printf("Citta laboratorio: ");
+    fgets(l->citta, 20, stdin);
+
+    printf("Numero dipendenti: ");
+    scanf("%d", &l->dipendenti);
+    clearBuffer();
+
+    printf("--- DATI PROGETTO ---\n");
+    riempiProgetto(&l->progetto);
+}
+
+/* -------- STAMPA -------- */
+
+void stampaLaboratorio(Laboratorio l) {
+    printf("Laboratorio: %s", l.nome);
+    printf("Citta: %s", l.citta);
+    printf("Dipendenti: %d\n", l.dipendenti);
+
+    printf(" Progetto: %s", l.progetto.titolo);
+    printf(" Budget: %.2f\n", l.progetto.budget);
+    printf(" Durata: %d mesi\n", l.progetto.durata);
+
+    printf(" Ricercatore responsabile:\n");
+    printf("  Nome: %s", l.progetto.responsabile.nome);
+    printf("  Settore: %s", l.progetto.responsabile.settore);
+    printf("  Pubblicazioni: %d\n", l.progetto.responsabile.pubblicazioni);
+}
+
+/* -------- MAIN -------- */
+
+int main() {
+    Laboratorio *labs;
+    int n;
+
+    do {
+        printf("Numero di laboratori (max 8): ");
+        scanf("%d", &n);
+        clearBuffer();
+
+        if (n <= 0 || n > 8)
+            printf("Numero non valido.\n");
+    } while (n <= 0 || n > 8);
+
+    labs = (Laboratorio *)malloc(n * sizeof(Laboratorio));
+
+    for (int i = 0; i < n; i++) {
+        printf("\nINSERISCI LABORATORIO %d\n", i + 1);
+        riempiLaboratorio(&labs[i]);
+    }
+
+    printf("\n--- LABORATORI CHE SODDISFANO LE CONDIZIONI ---\n");
+    for (int i = 0; i < n; i++) {
+        if (labs[i].progetto.budget > 50000.50 &&
+            labs[i].progetto.durata < 24 &&
+            labs[i].progetto.responsabile.pubblicazioni > 20 &&
+            labs[i].dipendenti % 2 == 0) {
+
+            printf("\n************************\n");
+            stampaLaboratorio(labs[i]);
+        }
+    }
+
+    free(labs);
+    return 0;
+}
