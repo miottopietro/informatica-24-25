@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Esempio align-items</title>
+		<style>
+			.container{
+			display: flex;
+			border: 2px solid #333;
+			height: 200px;
+			justify-content: center;
+			align-items:center;
+			}
+			
+			.box{
+				height: 50px;
+				width: 100px;
+				background: pink;
+	
+			}
+		</style>
+	</head>
+	
+	
+	<body>
+	 <div class="container">
+		<div class="box"></div> 
+		
+	 </div>
+	</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Javascript</title>
+		<script>
+			function mostraOra(){
+				var d = new Date();
+				var ora = d.toLocaleTimeString();
+				//alert(ora);
+				document.body.innerHTML += "<p>l'ora attuale è: </p>";
+				document.body.innerHTML += ora; 
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type="button" onclick="mostraOra()" value="Che ora è?">
+		</form>
+	</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TEXT AREA</title>
+		<style>
+			#output{
+				width: 300px;
+				height: 200px;
+				border: 2px solid red;
+			}
+		</style>
+		<script>
+			function scrivi() {
+				document.getElementById("output").innerHTML = description.value;
+			}
+		</script>
+	</head>
+	<body>
+		<form name="moduli">
+			<label>Lascia un commento: </label>
+			<input type="text" id="description"
+					name="description" maxlength="200"></input>
+			</br></br></br>
+			<input type="button" value="Clicca" onclick="scrivi();">
+			</input>
+			</br></br>
+			<div id="output"></div>
+		</form>
+	</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Esempio di modifica di una DIV</title>
+
+<style>
+	#output {
+		width: 400px;
+		height: 300px;
+		border: 1px solid black;
+		font-size: 15px;
+		transition: width 1s;
+	}
+
+</style>
+
+<script>
+	var larghezza=400;
+	var dimCarattere=15;
+	
+	function cambiaContenutoDiv() {
+		var msg=document.getElementById("messaggio").value;
+		var color=document.getElementById("colore").value;
+		document.getElementById("output").innerHTML=msg;
+		document.getElementById("output").style.color=color;
+	}
+	
+	function allargaCarattere() {
+		dimCarattere++;
+		document.getElementById("output").style.fontSize=dimCarattere+"px";
+	}
+	
+	function stringiCarattere() {
+		if (dimCarattere>8) {
+			dimCarattere--;
+			document.getElementById("output").style.fontSize=dimCarattere+"px";
+		}
+	}
+	
+	function allarga() {
+		larghezza+=50;
+		document.getElementById("output").style.width=larghezza+"px";
+	}
+	
+	function stringi() {
+		if (larghezza>50) {
+			larghezza-=50;
+			document.getElementById("output").style.width=larghezza+"px";
+		}
+	}
+	function resetta() {
+		document.spazio.messaggio.value="";
+		document.spazio.colore.value="";
+		document.getElementById("output").innerHTML="";
+	}
+	
+</script>
+
+</head>
+
+<body>
+	<form name="spazio">
+	Messaggio <input type="text" id="messaggio" name="messaggio" value=""><br>
+	Colore <input type="text" id="colore" name="colore" value=""><br>
+	<!-- Alla pressione del pulsante invia, il messaggio compare nella DIV,
+	con colore del testo come indicato dalla seconda casella di testo -->
+	<input type="button" value="Invia" onclick="cambiaContenutoDiv();"> 
+	
+	<!-- Allarga la DIV di 50 pixel andando a modificare l'attributo width CSS-->
+	<input type="button" value="Allarga" onclick="allarga();">
+	
+	<!-- Stringi la DIV di 50 pixel andando a modificare l'attributo width CSS-->
+	<input type="button" value="Stringi" onclick="stringi();">
+	
+	<!-- Allarga il carattere di 1px andando ad agire su CSS -->
+	<input type="button" value="Allarga carattere" onclick="allargaCarattere();">
+	
+	<!-- Stringi il carattere di 1px andando ad agire su CSS -->
+	<input type="button" value="Stringi carattere" onclick="stringiCarattere();">
+	<input type="button" value="Pulisci campi" onclick="resetta();">
+	
+	<div id="output"></div>
+	</form>
+</body>
+
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Somma di due numeri</h2>
+
+    <input id="num1" type="number" placeholder="Primo numero">
+    <input id="num2" type="number" placeholder="Secondo numero">
+    <button id="sommaBtn">Calcola somma</button>
+
+    <p>Risultato: <span id="risultato">0</span></p>
+
+    <script>
+      // Selezioniamo gli elementi dal DOM
+      const input1 = document.getElementById("num1");
+      const input2 = document.getElementById("num2");
+      const risultato = document.getElementById("risultato");
+      const bottone = document.getElementById("sommaBtn");
+
+      // Aggiungiamo un "ascoltatore" per il click
+      bottone.addEventListener("click", function() {
+        // Leggiamo i valori dagli input e li convertiamo in numeri
+        const valore1 = parseFloat(input1.value) || 0;
+        const valore2 = parseFloat(input2.value) || 0;
+
+        // Calcoliamo la somma
+        const somma = valore1 + valore2;
+
+        // Mostriamo il risultato
+        risultato.textContent = somma;
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head><title>INDOVINA NUMERO</title>
+		<script>
+			var ind = 12;
+			function resetta(){
+				document.getElementById("num").value = "";
+				document.bgColor="white";
+			}
+			function check(){
+				if(Math.abs(parseFloat(document.getElementById("num").value) - ind ) > 30 )
+					document.bgColor="red";
+			}
+		</script>
+	</head>
+	<body>
+		<label>Inserisci il numero:  </label>
+		<input type="text" id="num" value="">&nbsp;&nbsp;&nbsp;&nbsp;                 
+		<input type="button" value="controlla numero inserito" onclick="check();">&nbsp;&nbsp;
+		<input type="button" value="Reset" onclick="resetta();">
+	</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<script language="javascript">
+		str=""; op=""; str1="";
+		
+			function tasto(v)
+			{	document.calc.display.value+=v;
+				str+=v;
+			}
+			
+			function operat(p)
+			{	
+				op = p;
+				document.calc.display.value=""; 
+				str1=eval(str);				  
+				str="";
+			}								   
+			
+			function operaz()
+			{	
+				switch (op)
+				{
+					case  "+" :
+						document.calc.display.value= eval(str) + str1;
+						break;
+					case  "*" :
+						document.calc.display.value= eval(str) * str1;
+						break;
+					case  "-" :
+						document.calc.display.value= eval(str1) - str;
+						break;
+					case  "/" :
+						document.calc.display.value= eval(str1) / str;
+						break;	
+				}
+			}
+			
+			function canc()
+			{
+				document.calc.display.value="";
+				str="";
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		<table border=3>
+		<tr><td>
+		<form name="calc">
+			<br><b>CASIO</b><br>
+			<input type="text" name="display" value="" size="26" ><br><br>
+			<table border="2">
+				<tr>
+					<td><center><input type="button" value="1"  onClick="tasto(this.value);"></center></td>
+					<td><center><input type="button" value="2"  onClick="tasto(this.value);"></center></td>
+					<td><center><input type="button" value="3"  onClick="tasto(this.value);"></center></td>
+					<td><center><input type="button" value="*"  onClick="operat(this.value);"></center></td>
+				</tr>
+				<tr> 
+					<td><center><input type="button" value="4"   onClick="tasto(this.value);"></center></td>
+					<td><center><input type="button" value="5"   onClick="tasto(this.value);"></center></td>
+					<td><center><input type="button" value="6"   onClick="tasto(this.value);"></center></td>
+					<td><center><input type="button" value="-"   onClick="operat(this.value);"></center></td>
+				</tr>
+					<td><center><input type="button" value="7"  onClick="tasto(this.value);"></center></td>
+					<td><center><input type="button" value="8"  onClick="tasto(this.value);"></center></td>
+					<td><center><input type="button" value="9"  onClick="tasto(this.value);"></center></td>
+					<td><center><input type="button" value="="  onClick="operaz();"></center></td>
+				<tr>
+					<td><center><input type="button" value="0"  onClick="tasto(this.value);"></center></td>
+					<td><center><input type="button" value="+"  onClick="operat(this.value);"></center></td>
+					<td><center><input type="button" value="/"  onClick="operat(this.value);"></center></td>
+					<td><center><input type="button" value="."  onClick="tasto(this.value);"></center></td>
+				</tr>
+				<tr>
+					<td colspan=4><center><input type="button" value="C"  style="width: 200px;" onClick="canc();"></center></td>
+				</tr>	
+			</table>
+		</form>
+		</td></tr>
+	</table>
+	
+	</body>
+</html>
+
+
+
+
+
+<html>
+	<head>
+	<script language="javascript">
+	
+	function rosso()
+	{
+		document.bgColor="red";
+		/*var win2 = window.open("");
+			win2.document.open();
+			win2.document.bgColor="red";
+			win2.document.close();
+		*/
+		
+	}
+	function verde()
+	{	
+		document.bgColor="green";
+		/*var win2 = window.open();
+			win2.document.bgColor="green";
+			win2.document.close();
+		*/
+	}
+	function blu()
+	{
+		document.bgColor="blue";
+		var win2 = window.open("");
+			/*win2.document.open();*/
+			win2.document.bgColor="yellow";
+			win2.document.close();
+			
+	}
+	
+	</script>
+	</head>
+	<body>
+	<form name="modulo">
+	<table border=2>
+	<tr>
+		<td>
+			<img src="img1.jpg"  onclick="rosso();"  >
+		</td>
+		<td>
+			<img src="img2.jpg"  onclick="verde();" >
+		</td>
+		<td>
+			<img src="img3.jpg"  onclick="blu();" >
+		</td>
+	</tr>
+	</table>
+	</form>
+	</body>
+</html>	

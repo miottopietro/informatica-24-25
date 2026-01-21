@@ -32,6 +32,30 @@
         }
     </style>
 </head>
+
+<script>
+    function generaCarta() {
+        let nome = document.getElementById("nome").value;
+        let cognome = document.getElementById("cognome").value;
+        let sesso = document.getElementById("sesso").value;
+        let email = document.getElementById("email").value;
+        let telefono = document.getElementById("telefono").value;
+
+        if (!nome || !cognome || !sesso || !email || !telefono) {
+            alert("Compila tutti i campi!");
+            return;
+        }
+
+        document.getElementById("outNome").textContent = nome;
+        document.getElementById("outCognome").textContent = cognome;
+        document.getElementById("outSesso").textContent = sesso;
+        document.getElementById("outEmail").textContent = email;
+        document.getElementById("outTelefono").textContent = telefono;
+
+        document.getElementById("carta").style.display = "block";
+    }
+</script>
+
 <body>
 
 <div class="container">
@@ -62,29 +86,5 @@
     </div>
 </div>
 
-<script>
-    function generaCarta() {
-        let nome = document.getElementById("nome").value;
-        let cognome = document.getElementById("cognome").value;
-        let sesso = document.getElementById("sesso").value;
-        let email = document.getElementById("email").value;
-        let telefono = document.getElementById("telefono").value;
-
-        if (!nome || !cognome || !sesso || !email || !telefono) {
-            alert("Compila tutti i campi!");
-            return;
-        }
-
-        document.getElementById("outNome").textContent = nome;
-        document.getElementById("outCognome").textContent = cognome;
-        document.getElementById("outSesso").textContent = sesso;
-        document.getElementById("outEmail").textContent = email;
-        document.getElementById("outTelefono").textContent = telefono;
-
-        document.getElementById("carta").style.display = "block";
-    }
-</script>
-
 </body>
 </html>
-
